@@ -1,5 +1,5 @@
-import { createContext, useEffect, useState } from "react";
-import { api } from '../lib/axios';
+import { createContext, useEffect, useState } from 'react'
+import { api } from '../lib/axios'
 
 interface ITransaction {
   id: number
@@ -38,7 +38,7 @@ export function TransactionsProvider({ children }: ITransactionsProviderProps) {
         _sort: 'createdAt',
         _order: 'desc',
         q: query,
-      }
+      },
     })
 
     setTransactions(response.data)
@@ -52,10 +52,10 @@ export function TransactionsProvider({ children }: ITransactionsProviderProps) {
       category,
       price,
       type,
-      createdAt: new Date() // This is a mock date, in a real application the date should be generated on the server
+      createdAt: new Date(), // This is a mock date, in a real application the date should be generated on the server
     })
 
-    setTransactions(state => [response.data, ...state])
+    setTransactions((state) => [response.data, ...state])
   }
 
   useEffect(() => {
