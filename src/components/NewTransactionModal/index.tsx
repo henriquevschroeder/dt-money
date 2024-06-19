@@ -20,12 +20,12 @@ export function NewTransactionModal() {
           <input type="text" placeholder="Category" required />
 
           <TransactionType>
-            <TransactionTypeButton variant="income">
+            <TransactionTypeButton value="income" variant="income">
               <ArrowCircleUp size={24} />
               Income
             </TransactionTypeButton>
 
-            <TransactionTypeButton variant="outcome">
+            <TransactionTypeButton value="outcome" variant="outcome">
               <ArrowCircleDown size={24} />
               Outcome
             </TransactionTypeButton>
